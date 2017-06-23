@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+
+    tools:context="app.example.android.justjava.MainActivity">
+
+
+    <TextView
+        android:id="@+id/quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="20sp"
+        android:text="Quantity"
+        android:textColor="@android:color/holo_blue_bright"
+        android:textSize="36sp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp">
+
+        <Button
+            android:id="@+id/minus"
+            android:layout_width="52dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="@+id/no"
+            android:onClick="decrement"
+            android:text="-"
+            android:textSize="20sp" />
+
+
+        <TextView
+            android:id="@+id/no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:layout_marginLeft="20sp"
+            android:layout_toRightOf="@+id/minus"
+            android:text="0"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/plus"
+            android:layout_width="52dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/no"
+            android:onClick="increment"
+            android:text="+"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button"
+        android:layout_alignBottom="@+id/button"
+        android:layout_alignLeft="@+id/plus"
+        android:layout_alignStart="@+id/plus"
+        android:layout_margin="20sp"
+        android:text="Price"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/price_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/price"
+        android:layout_alignBottom="@+id/price"
+        android:layout_margin="20sp"
+        android:layout_toEndOf="@+id/no"
+        android:layout_toRightOf="@+id/no"
+        android:text="0"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="20sp"
+        android:layout_marginBottom="125dp"
+        android:onClick="submitOrder"
+        android:text="ORDER"
+        android:textSize="36sp" />
+</LinearLayout>
